@@ -7,7 +7,7 @@ def error_msg_details(error,error_detail:sys):
     error_msg = f"Error occured in python script name: [{file_name}] \nline number: [{exc_tb.tb_lineno}] \nerror message: [{str(error)}]"
     return error_msg
 
-class customException(Exception):
+class CustomException(Exception):
     def __init__(self, error_msg, error_detail:sys):
         super().__init__(error_msg)
         self.error_msg = error_msg_details(error_msg,error_detail=error_detail)
